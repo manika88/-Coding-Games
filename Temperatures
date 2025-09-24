@@ -1,0 +1,51 @@
+//Temperatures
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+
+int main()
+
+{
+    int minraz=10000;
+    vector<int> Mass;
+
+    int n; // the number of temperatures to analyse
+    cin >> n; cin.ignore();
+    
+    for (int i = 0; i < n; i++) {
+        int t; // a temperature expressed as an integer ranging from -273 to 5526
+        cin >> t; cin.ignore();
+        Mass.push_back(t);
+       
+        
+            if(abs(t)<abs(minraz))
+            {
+                minraz=t;
+
+            }
+            else if(abs(t)==abs(minraz) && t>0 )
+            {
+                minraz=t;
+            }
+        
+       
+    }
+    if(Mass.size()==0)
+    {
+           minraz=0;
+    }
+    
+
+    // Write an answer using cout. DON'T FORGET THE "<< endl"
+    // To debug: cerr << "Debug messages..." << endl;
+
+    cout << minraz << endl;
+}
