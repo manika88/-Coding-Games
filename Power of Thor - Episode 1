@@ -30,22 +30,22 @@ int main()
 
         // Write an action using cout. DON'T FORGET THE "<< endl"
         // To debug: cerr << "Debug messages..." << endl;
-        int dx = light_x - current_tx;
-        int dy = light_y - current_ty;
+        int x = light_x - current_tx;
+        int y = light_y - current_ty;
         string direction = "";
 
-        if (dy > 0) {
+        if (y > 0) {
             direction += "S";
             current_ty++;
-        } else if (dy < 0) {
+        } else if (y < 0) {
             direction += "N";
             current_ty--;
         }
 
-        if (dx > 0) {
+        if (x > 0) {
             direction += "E";
             current_tx++;
-        } else if (dx < 0) {
+        } else if (x < 0) {
             direction += "W";
             current_tx--;
         }
